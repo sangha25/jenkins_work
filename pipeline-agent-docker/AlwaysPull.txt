@@ -3,6 +3,7 @@ pipeline {
         docker {
             image 'maven:3.5.3-jdk-10-slim'
 			args '-e someEnv=dev'
+			alwaysPull false
 			alwaysPull true
         }
     }
