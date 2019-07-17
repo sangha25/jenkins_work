@@ -19,7 +19,7 @@ pipeline {
                 } 
             }            
             steps{
-                sh 'cat /etc/lsb-release'
+                sh 'cat /etc/'
             }
         }
     }
