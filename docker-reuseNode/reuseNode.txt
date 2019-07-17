@@ -19,7 +19,7 @@ pipeline {
             agent {
                 docker { 
                     image 'ubuntu:16.04'
-                    reuseNode true
+                    reuseNode false
                 }
             }
             steps {
