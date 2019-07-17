@@ -3,13 +3,15 @@ pipeline {
         docker {
             image 'maven:3.5.3-jdk-10-slim'
 			args '-e someEnv=dev'
-			alwaysPull true
+			alwaysPull fale
+			//path of workspace
 			customWorkspace '/var/lib/jenkins/workspace/myCustomWorkspace'
         }
     }
     stages {
         stage('Build') {
             steps {
+	    //calling Variables
                 sh 'echo $someEnv'
             }
         }
